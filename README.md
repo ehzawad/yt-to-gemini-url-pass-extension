@@ -4,3 +4,5 @@
 - Enable "Developer mode" (toggle in top right)
 - Click "Load unpacked" and select your extension folder
 - The extension will appear in your browser toolbar
+
+https://ehzawad.github.io/yt-to-gemini-url-pass-extension/privacy-policy.html
