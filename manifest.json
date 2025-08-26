@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "YouTube to Gemini Sender",
-  "version": "1.0",
-  "description": "Send current YouTube video URL to Gemini with one click",
+  "version": "1.1",
+  "description": "Send current YouTube video or YouTube shorts URL to Gemini with one click",
   "permissions": ["activeTab", "tabs"],
   "host_permissions": [
     "https://youtube.com/*",

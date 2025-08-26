@@ -1,7 +1,8 @@
 const GEMINI_URL = "https://gemini.google.com/app";
 
 chrome.action.onClicked.addListener(async (tab) => {
-  if (tab.url && tab.url.includes("youtube.com/watch")) {
+  // Check if we're on a YouTube video or Short
+  if (tab.url && (tab.url.includes("youtube.com/watch") || tab.url.includes("youtube.com/shorts/"))) {
     const youtubeUrl = tab.url;
     
     // Always open a new Gemini tab
@@ -25,7 +26,7 @@ chrome.action.onClicked.addListener(async (tab) => {
       });
     });
   } else {
-    // Notify the user that they need to be on a YouTube video page
+    // Notify the user that they need to be on a YouTube video or Short page
     chrome.tabs.create({url: "error.html"});
   }
 });
