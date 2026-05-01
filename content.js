@@ -54,11 +54,13 @@ async function insertUrlAndSubmit(youtubeUrl) {
     throw new Error("Could not find Gemini input field after multiple attempts");
   }
   
+  const promptText = `${youtubeUrl} a brief summary of what this video about`;
+
   inputField.focus();
   if (inputField.tagName.toLowerCase() === 'textarea') {
-    inputField.value = youtubeUrl;
+    inputField.value = promptText;
   } else {
-    inputField.innerText = youtubeUrl;
+    inputField.innerText = promptText;
   }
   // Dispatch input event to ensure Gemini recognizes the input
   inputField.dispatchEvent(new Event('input', { bubbles: true }));
